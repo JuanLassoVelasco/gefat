@@ -1,3 +1,10 @@
+use clap::Parser;
+use gefat::args::Args;
+
 fn main() {
-    println!("Hello, world!");
+    let args = Args::parse();
+
+    for _ in 0..args.count {
+        println!("Hey {}", args.name);
+    }
 }
